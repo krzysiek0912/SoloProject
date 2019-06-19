@@ -1,6 +1,23 @@
 * {
   box-sizing: border-box;
 }
+body {
+  // padding-left: 188px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  overflow: hidden;
+}
+.content {
+  padding: 20px;
+  flex-grow: 1;
+  overflow: auto;
+  height: 100vh;
+  main {
+    // to test scroll
+    max-width: 200px;
+  }
+}
 
 .container {
   width: 100%;

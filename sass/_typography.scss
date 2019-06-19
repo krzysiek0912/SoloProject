@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=latin-ext");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 300;
+  color: $navy-blue;
+  &:hover {
+    color: $orangeLight;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $gray;
+  font-size: 16px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 700;
+}
+h3 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 14px;
+  color: $dark;
+}

@@ -1,0 +1,7 @@
+button.btn { padding: 13px 20px; font-family: "Roboto", sans-serif; color: white; background: #979797; font-size: 18px; }
+
+button.btn:hover { background: #bababa; }
+
+button.btn.btn-orange { background: #f58220; }
+
+button.btn.btn-orange:hover { background: #ffa200; }
