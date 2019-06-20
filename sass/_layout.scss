@@ -9,13 +9,25 @@ body {
   overflow: hidden;
 }
 .content {
-  padding: 20px;
+  padding-top: 60px;
   flex-grow: 1;
-  overflow: auto;
   height: 100vh;
+  background: $light;
+  // width: 100%;
+  overflow: auto;
   main {
-    // to test scroll
-    max-width: 200px;
+    padding: 20px;
+    // totest scroll
+    // max-width: 200px;
+    overflow: auto;
+    height: 100%;
+    padding: 20px;
+
+    min-height: 90vh;
+    > section {
+      background: $white;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -36,8 +48,11 @@ body {
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -15px;
 }
-
+[class*="col-"] {
+  padding: 15px;
+}
 @media (max-width: 767px) {
   @include grid("sm");
 }

@@ -1,5 +1,5 @@
-button.btn {
-  padding: 13px 20px;
+.btn {
+  padding: 13px 15px;
   border: 0;
   border-radius: 3px;
   font-family: "Roboto", sans-serif;
@@ -14,5 +14,11 @@ button.btn {
     &:hover {
       background: $orangeLight;
     }
+  }
+  &.btn-icon {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
   }
 }

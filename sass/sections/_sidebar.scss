@@ -1,11 +1,14 @@
 .sidebar {
   // position: fixed;
+  flex: 1 0 auto;
   display: inline-block;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   background: #191919;
-  overflow: hidden;
+  // overflow: hidden;
+  overflow: auto;
+  z-index: 2;
   &::-webkit-scrollbar {
     display: none;
   }

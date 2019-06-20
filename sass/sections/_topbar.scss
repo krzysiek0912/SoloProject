@@ -1,0 +1,33 @@
+header {
+  color: $gray;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid $grayLight;
+  //   margin-right: 14px;
+  background: $white;
+  z-index: 1;
+  [class*="icon-"] {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    padding-left: 10px;
+    display: inline-block;
+  }
+}
+.header--wallet,
+.header--profile,
+.icon-notification,
+.icon-quit {
+  display: flex;
+  border-left: 1px solid #e3e3e3;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.header--wallet-amount {
+  padding: 0 10px 0 20px;
+}
