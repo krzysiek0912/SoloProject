@@ -1,10 +1,12 @@
 .sidebar {
   // position: fixed;
-  flex: 1 0 auto;
+
+  flex: auto 0 auto;
   display: inline-block;
   top: 0;
   left: 0;
   min-height: 100vh;
+  // max-width: 188px;
   background: #191919;
   // overflow: hidden;
   overflow: auto;
@@ -122,6 +124,7 @@
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   padding: 0;
+  transition: width 2s;
   // position: absolute;
   // width: 300px;
   // margin: -100px 0 0 -50px;
@@ -184,5 +187,55 @@
   .sidebar--manager-content {
     display: flex;
     align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: block;
+    position: fixed;
+    min-height: 60px;
+    width: 100%;
+    overflow: hidden;
+    transition: height 2s;
+    .sidebar--menu,
+    .sidebar--manager,
+    .sidebar--logo {
+      width: 100%;
+      text-align: center;
+    }
+    .sidebar--manager-content {
+      display: inline-block;
+      a {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    // width: 100%;
+    nav input {
+      &:checked {
+        top: 0;
+        right: 22px;
+        // width: 100%;
+        height: 60px;
+        ~ .burger {
+          position: absolute;
+          padding: 15px;
+          top: 5px;
+          right: 35px;
+          left: auto;
+        }
+        ~ a.sidebar--logo {
+          display: block;
+        }
+        ~ ul.sidebar--menu,
+        ~ .sidebar--manager {
+          display: none;
+        }
+      }
+    }
+    .content {
+      padding-left: 100px;
+    }
   }
 }

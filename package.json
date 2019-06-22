@@ -16,7 +16,7 @@
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
-    "watch:sassprefixer": "onchange 'sass/*.scss' -- npm-run-all build:sass build:autoprefixer",
+    "watch:sassprefixer": "onchange 'sass/**/*.scss' -- npm-run-all build:sass build:autoprefixer",
     "watch:browsersync": "browser-sync start --server --files 'css/*.css' '*.html'"
   },
   "repository": {
@@ -31,6 +31,8 @@
   },
   "homepage": "https://github.com/krzysiek0912/learning-git-2#readme",
   "devDependencies": {
+    "lodash": ">=4.17.13",
+    "superagent": ">=3.7.0",
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.7",
     "globstar": "^1.0.0",

@@ -1,8 +1,67 @@
-input[type="text"] {
+form.data-period {
+  text-align: center;
+}
+input[type="text"],
+input[type="date"] {
   padding: 5px 10px;
   font-size: 14px;
   background-color: #fff;
   border: 1px solid $grayLight;
   color: #000000;
   outline: none;
+}
+input::-webkit-datetime-edit {
+  -webkit-flex: 1;
+  -webkit-user-modify: read-only !important;
+  display: inline-block;
+  min-width: 0;
+  overflow: hidden;
+}
+
+// input[type="date"] {
+//   position: relative;
+// }
+// input[type="date"]::-webkit-inner-spin-button,
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//   opacity: 1;
+//   width: 100%;
+//   display: block;
+//   -webkit-appearance: block;
+//   position: absolute;
+// }
+div.fieldgroup {
+  display: inline-flex;
+  .datagroup {
+    margin: 0 15px;
+    padding: 5px 25px 5px 5px;
+    border: 1px solid $grayLight;
+    position: relative;
+    &:after {
+      font-family: "Glyphter";
+      font-style: normal;
+      font-weight: normal;
+      content: "\0048";
+      position: absolute;
+      top: 8px;
+      right: 15px;
+    }
+    input[type="date"] {
+      width: 150px;
+      max-width: 47%;
+      border: none;
+      &:first-of-type {
+        border-right: 1px solid $grayLight;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  div.fieldgroup {
+    display: block;
+    .btn {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
 }

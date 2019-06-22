@@ -33,16 +33,14 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 688px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 30px 15px;
 }
 
 .container-fluid {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 30px 15px;
 }
 
 .row {
@@ -51,8 +49,10 @@ body {
   margin: 0 -15px;
 }
 [class*="col-"] {
-  padding: 15px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
+
 @media (max-width: 767px) {
   @include grid("sm");
 }
