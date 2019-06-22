@@ -5,6 +5,8 @@
   font-family: "Roboto", sans-serif;
   color: white;
   background: $darkLight;
+  font-weight: 100;
+  cursor: pointer;
   font-size: 18px;
   &:hover {
     background: $gray;
@@ -15,10 +17,19 @@
       background: $orangeLight;
     }
   }
+  &.btn-plus {
+    padding-left: 30px;
+    position: relative;
+    &:after {
+    }
+  }
   &.btn-icon {
     padding: 0;
     width: 40px;
     height: 40px;
-    line-height: 40px;
+
+    i[class*="icon-"]::before {
+      line-height: 40px;
+    }
   }
 }
