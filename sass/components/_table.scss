@@ -5,25 +5,31 @@
   border-collapse: collapse;
   table-layout: fixed;
   margin: 30px 0;
+
   tr {
     border-bottom: 1px solid $grayLight;
+
     &:first-of-type {
       border-top: 1px solid $grayLight;
     }
   }
+
   td {
     padding: 20px 15px;
   }
 }
+
 .table-striped tbody tr:nth-of-type(2n + 1) {
   background-color: rgba(0, 0, 0, 0.05);
 }
+
 .table-borderless tbody + tbody,
 .table-borderless td,
 .table-borderless th,
 .table-borderless thead th {
   border: 0;
 }
+
 .table-hover tbody tr:hover {
   //   color: #212529;
   //   border: 0;
@@ -34,17 +40,37 @@
   tr:hover td:last-of-type {
     opacity: 1;
   }
+
   td:last-of-type {
     opacity: 0;
     text-align: right;
+
     a {
       color: $darkLight;
       &:hover {
         color: $orange;
       }
     }
+
     i {
       padding: 0 10px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .table-links {
+    tr {
+      display: block;
+    }
+
+    td {
+      display: block;
+      text-align: center;
+      padding: 5px 0;
+
+      &:last-of-type {
+        text-align: center;
+      }
     }
   }
 }
