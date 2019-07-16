@@ -1,29 +1,28 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  // padding-left: 188px;
   display: flex;
   flex-direction: row-reverse;
   align-items: stretch;
   overflow: hidden;
 }
+
 .content {
   padding-top: 60px;
   flex-grow: 1;
   height: 100vh;
   background: $light;
-  // width: 100%;
   overflow: auto;
+
   main {
     padding: 20px;
-    // totest scroll
-    // max-width: 200px;
     overflow: auto;
     height: 100%;
     padding: 20px;
-
     min-height: 90vh;
+
     > section {
       background: $white;
       margin-bottom: 20px;
@@ -48,9 +47,11 @@ body {
   flex-wrap: wrap;
   margin: 0 -15px;
 }
+
 [class*="col-"] {
   padding: 0 15px;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 @media (max-width: 767px) {

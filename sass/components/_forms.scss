@@ -1,6 +1,7 @@
 form.data-period {
   text-align: center;
 }
+
 input[type="text"],
 input[type="date"] {
   padding: 5px 10px;
@@ -10,32 +11,48 @@ input[type="date"] {
   color: #000000;
   outline: none;
 }
+
+form {
+  text-align: center;
+}
+
+label {
+  width: 450px;
+  max-width: 100%;
+  line-height: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 310px;
+  height: 40px;
+  line-height: 40px;
+}
+
 input::-webkit-datetime-edit {
-  -webkit-flex: 1;
+  flex: 1;
   -webkit-user-modify: read-only !important;
   display: inline-block;
   min-width: 0;
   overflow: hidden;
 }
 
-// input[type="date"] {
-//   position: relative;
-// }
-// input[type="date"]::-webkit-inner-spin-button,
-// input[type="date"]::-webkit-calendar-picker-indicator {
-//   opacity: 1;
-//   width: 100%;
-//   display: block;
-//   -webkit-appearance: block;
-//   position: absolute;
-// }
 div.fieldgroup {
   display: inline-flex;
+
   .datagroup {
     margin: 0 15px;
     padding: 5px 25px 5px 5px;
     border: 1px solid $grayLight;
     position: relative;
+
     &:after {
       font-family: "Glyphter";
       font-style: normal;
@@ -45,10 +62,12 @@ div.fieldgroup {
       top: 8px;
       right: 15px;
     }
+
     input[type="date"] {
       width: 150px;
       max-width: 47%;
       border: none;
+
       &:first-of-type {
         border-right: 1px solid $grayLight;
       }
@@ -59,9 +78,20 @@ div.fieldgroup {
 @media (max-width: 767px) {
   div.fieldgroup {
     display: block;
+
     .btn {
       margin-top: 10px;
       width: 100%;
     }
+  }
+
+  label,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"] {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }

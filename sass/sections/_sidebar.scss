@@ -132,15 +132,19 @@
 
   li {
     font-size: 14px;
-    color: $darkLight;
+
     padding: 12px 15px;
     border-left: 4px solid transparent;
     cursor: pointer;
-
+    a {
+      color: $darkLight;
+    }
     &.active,
     &:hover {
-      color: $white;
       border-color: $orange;
+      a {
+        color: $white;
+      }
     }
 
     i {

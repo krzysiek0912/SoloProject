@@ -1,6 +1,7 @@
 ul {
   list-style: none;
   padding: 0;
+
   &.flex-list {
     li {
       display: flex;
@@ -8,6 +9,7 @@ ul {
       width: 100%;
       padding: 20px 0;
       border-bottom: 1px solid $grayLight;
+
       span {
         font-weight: 100;
       }

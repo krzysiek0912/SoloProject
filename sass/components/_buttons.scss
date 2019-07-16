@@ -8,21 +8,24 @@
   font-weight: 100;
   cursor: pointer;
   font-size: 18px;
+
   &:hover {
     background: $gray;
   }
+
   &.btn-orange {
     background: $orange;
+
     &:hover {
       background: $orangeLight;
     }
   }
+
   &.btn-plus {
     padding-left: 30px;
     position: relative;
-    &:after {
-    }
   }
+
   &.btn-icon {
     padding: 0;
     width: 40px;
