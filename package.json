@@ -20,7 +20,8 @@
     "build-prod:sass": "node-sass --output-style compressed -o dock/css sass",
     "build-prod:autoprefixer": "autoprefixer-cli dock/css/style.css",
     "build-prod:htmlmin": "cp *.html dock/ && html-minifier --input-dir dock --output-dir dock --remove-comments --collapse-whitespace --minify-js --minify-css",
-    "build-prod:copy": "cp -r images/ dock/images/ && cp -r js/ dock/js && cp -r vendor/ dock/vendor",
+    "build-prod:copy": "cp -r images/ dock/images && cp -r js/ dock/js && cp -r vendor/ dock/vendor",
+    "build-prod:jsmin": "uglifyjs js/modal.js > dock/js/modal.js && uglifyjs js/script.js > dock/js/script.js ",
     "build-prod:test": "globstar nu-html-checker dock/*.html",
     "watch": "npm-run-all build -p watch:*",
     "watch:sassprefixer": "onchange 'sass/**/*.scss' -- npm-run-all build:sass build:autoprefixer",
@@ -42,6 +43,8 @@
     "browser-sync": "^2.26.7",
     "globstar": "^1.0.0",
     "html-minifier": "^4.0.0",
+    "imagemin-cli": "^5.0.0",
+    "imagemin-gifsicle": "^6.0.1",
     "jshint": "^2.10.2",
     "lodash": ">=4.17.13",
     "node-sass": "^4.12.0",
@@ -49,9 +52,9 @@
     "nu-html-checker": "^0.1.0",
     "onchange": "^6.0.0",
     "rimraf": "^2.6.3",
-    "superagent": ">=3.7.0"
+    "superagent": ">=3.7.0",
+    "uglify-es": "^3.3.9",
+    "uglify-js": "^3.6.0"
   },
-  "dependencies": {
-    "imagemin-gifsicle": "^6.0.1"
-  }
+  "dependencies": {}
 }
