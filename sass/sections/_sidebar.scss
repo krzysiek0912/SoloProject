@@ -27,7 +27,7 @@
       height: 32px;
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: 26px;
     }
 
     input {
@@ -57,7 +57,6 @@
       }
 
       &:checked {
-        top: 0;
         ~ ul.sidebar--menu .sidebar--menu-title,
         ~ .sidebar--manager h3,
         ~ .sidebar--manager a,
@@ -68,9 +67,8 @@
         ~ .burger {
           display: block;
           margin: 0 auto;
-          right: 0;
-          left: 0;
-          top: 0;
+          // right: 0;
+          // left: 0;
 
           span {
             transform: none;
